@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Allen3039.github.io</id>
     <title>Gridea</title>
-    <updated>2021-07-03T04:19:21.993Z</updated>
+    <updated>2021-07-03T04:56:25.117Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Allen3039.github.io"/>
     <link rel="self" href="https://Allen3039.github.io/atom.xml"/>
@@ -10,6 +10,200 @@
     <logo>https://Allen3039.github.io/images/avatar.png</logo>
     <icon>https://Allen3039.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[geojson 学习]]></title>
+        <id>https://Allen3039.github.io/post/geojson-xue-xi/</id>
+        <link href="https://Allen3039.github.io/post/geojson-xue-xi/">
+        </link>
+        <updated>2021-07-03T04:20:09.000Z</updated>
+        <content type="html"><![CDATA[<p>市面上的地图都是采用geojson来描述地图的<br>
+其基本结构如下</p>
+<pre><code>{
+    type:&quot;FeatureCollection&quot;,
+    features:[]
+}
+</code></pre>
+<p>它有如下几种类型</p>
+<h1 id="点">点</h1>
+<h2 id="单点">单点</h2>
+<pre><code>{
+    type:&quot;FeatureCollection&quot;,
+    features:[
+            {
+      &quot;type&quot;: &quot;Feature&quot;,
+      &quot;properties&quot;: {},
+      &quot;geometry&quot;: {
+        &quot;type&quot;: &quot;Point&quot;,
+        &quot;coordinates&quot;: [
+          89.6484375,
+          68.13885164925573
+        ]
+      }
+    }
+    ]
+}
+</code></pre>
+<h2 id="多点">多点</h2>
+<pre><code>{
+    type:&quot;FeatureCollection&quot;,
+    features:[
+            {
+      &quot;type&quot;: &quot;Feature&quot;,
+      &quot;properties&quot;: {},
+      &quot;geometry&quot;: {
+        &quot;type&quot;: &quot;MultiPoint&quot;,
+        &quot;coordinates&quot;: [[
+          89.6484375,
+          68.13885164925573
+        ],[
+            89.6484375,
+          78.13885164925573
+        ]]
+      }
+    }
+    ]
+}
+</code></pre>
+<h1 id="线">线</h1>
+<h2 id="单条线">单条线</h2>
+<p>在坐标的描述结构和点类似，只是type有所区别</p>
+<pre><code>{
+    type:&quot;FeatureCollection&quot;,
+    features:[
+            {
+      &quot;type&quot;: &quot;Feature&quot;,
+      &quot;properties&quot;: {},
+      &quot;geometry&quot;: {
+        &quot;type&quot;:&quot;LineString&quot;,
+        &quot;coordinates&quot;: [[
+          89.6484375,
+          68.13885164925573
+        ],[
+            89.6484375,
+          78.13885164925573
+        ]]
+      }
+    }
+    ]
+}
+</code></pre>
+<h2 id="多条线">多条线</h2>
+<pre><code>{
+      &quot;type&quot;: &quot;Feature&quot;,
+      &quot;properties&quot;: {},
+      &quot;geometry&quot;: {
+        &quot;type&quot;: &quot;MultiLineString&quot;,
+        &quot;coordinates&quot;: [[[
+          124.8046875,
+          63.860035895395306
+        ],[
+          124.8046875,
+          73.860035895395306
+        ],
+                       [
+          128.8046875,
+          23.860035895395306
+        ]],
+                       [[
+          24.8046875,
+          63.860035895395306
+        ],[
+          124.8046875,
+          73.860035895395306
+        ],
+                       [
+          128.8046875,
+          93.860035895395306
+        ]]]
+      }
+    }
+</code></pre>
+<h1 id="面">面</h1>
+<h2 id="单面">单面</h2>
+<pre><code>{
+  &quot;type&quot;: &quot;FeatureCollection&quot;,
+  &quot;features&quot;: [
+    {
+      &quot;type&quot;:&quot;Feature&quot;,
+      &quot;properties&quot;:{},
+      &quot;geometry&quot;:{
+        &quot;type&quot;:&quot;Polygon&quot;,
+        &quot;coordinates&quot;:[[[66,77],[88,99],[100,100],[66,77]]]
+      }
+    }
+  ]
+}
+</code></pre>
+<h2 id="单面中空">单面中空</h2>
+<p>重叠区域颜色中空</p>
+<pre><code>{
+  &quot;type&quot;: &quot;FeatureCollection&quot;,
+  &quot;features&quot;: [
+    {
+      &quot;type&quot;: &quot;Feature&quot;,
+      &quot;properties&quot;: {},
+      &quot;geometry&quot;: {
+        &quot;type&quot;: &quot;Polygon&quot;,
+        &quot;coordinates&quot;: [
+          
+            [
+              [66, 77],
+              [88, 99],
+              [100, 100],
+              [66, 77]
+            ],
+            [
+                [6, 77],
+                [88, 99],
+                [100, 100],
+                [6, 77]
+              ]
+          
+        ]
+      }
+    }
+  ]
+}
+</code></pre>
+<p>示例<br>
+<img src="https://Allen3039.github.io/post-images/1625288083238.png" alt="" loading="lazy"></p>
+<h2 id="多面">多面</h2>
+<p>重叠区域颜色加重</p>
+<pre><code>{
+  &quot;type&quot;: &quot;FeatureCollection&quot;,
+  &quot;features&quot;: [
+    {
+      &quot;type&quot;: &quot;Feature&quot;,
+      &quot;properties&quot;: {},
+      &quot;geometry&quot;: {
+        &quot;type&quot;: &quot;MultiPolygon&quot;,
+        &quot;coordinates&quot;: [
+          [
+            [
+              [66, 77],
+              [88, 99],
+              [100, 100],
+              [66, 77]
+            ]
+          ],
+          [
+            [
+                [6, 77],
+                [88, 99],
+                [100, 100],
+                [6, 77]
+              ]
+          ]
+        ]
+      }
+    }
+  ]
+}
+</code></pre>
+<p>示例<br>
+<img src="https://Allen3039.github.io/post-images/1625288064945.png" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://Allen3039.github.io/post/hello-gridea/</id>
