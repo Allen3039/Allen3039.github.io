@@ -2,18 +2,21 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Hello Gridea | Gridea</title>
+<title>package.json 知多少 | Gridea</title>
 <link rel="shortcut icon" href="https://Allen3039.github.io/favicon.ico?v=1632561359223">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://Allen3039.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Hello Gridea | Gridea - Atom Feed" href="https://Allen3039.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="package.json 知多少 | Gridea - Atom Feed" href="https://Allen3039.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="aaa
-" />
-    <meta name="keywords" content="Gridea" />
+    <meta name="description" content="dependency
+peer
+开发对应工具的插件时使用，比如我给A开发了插件B，这个插件B依赖的A的版本是2.X，那么指定peer,就可以让B安装在指定依赖A是低版本的项目中报警。
+optional
+npm install 这部分依赖报错..." />
+    <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -75,36 +78,72 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              Hello Gridea
+              package.json 知多少
             </h2>
             <div class="post-info">
               <span>
-                2018-12-12
+                2021-09-03
               </span>
               <span>
                 1 min read
               </span>
               
-                <a href="https://Allen3039.github.io/tag/huwi33adp/" class="post-tag">
-                  # Gridea
-                </a>
-              
             </div>
-            
-              <img class="post-feature-image" src="https://Allen3039.github.io/post-images/hello-gridea.png" alt="">
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>aaa</p>
+                <h2 id="dependency">dependency</h2>
+<p>peer<br>
+开发对应工具的插件时使用，比如我给A开发了插件B，这个插件B依赖的A的版本是2.X，那么指定peer,就可以让B安装在指定依赖A是低版本的项目中报警。</p>
+<p>optional<br>
+npm install 这部分依赖报错不影响安装</p>
+<p>bundled<br>
+npm pack 会使用的字段</p>
+<h2 id="config">config</h2>
+<p>配和scripts 脚本使用</p>
+<pre><code>&quot;scripts&quot;:{
+&quot;testenv&quot;: &quot;node ./npmconfig.env.js&quot;
+} ,
+&quot;config&quot;: {
+    &quot;foo&quot;: 1
+  }
+</code></pre>
+<p>比如 这里面的脚本可以打印出，config内定义的变量，例如npm_package_config_foo</p>
+<h2 id="模块">模块</h2>
+<p>module<br>
+配和打包工具，环境是node 时 优先使用</p>
+<p>main<br>
+不使用打包工具时，node 优先使用</p>
+<p>browser<br>
+配和打包工具时，环境是browser 时 优先使用</p>
+<p>https://www.cnblogs.com/qianxiaox/p/14041717.html</p>
 
               </div>
               <div class="toc-container">
-                
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#dependency">dependency</a></li>
+<li><a href="#config">config</a></li>
+<li><a href="#%E6%A8%A1%E5%9D%97">模块</a></li>
+</ul>
+</li>
+</ul>
+
               </div>
             </div>
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://Allen3039.github.io/post/qu-de-bu-xiao-yu-poolused-qie-wei-8-de-bei-shu-de-zhi/">
+              <h3 class="post-title">
+                取得不小于pool.used 且为8的倍数的值
+              </h3>
+            </a>
+          </div>
         
 
         

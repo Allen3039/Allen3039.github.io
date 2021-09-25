@@ -2,18 +2,24 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Hello Gridea | Gridea</title>
+<title>const let 解惑 | Gridea</title>
 <link rel="shortcut icon" href="https://Allen3039.github.io/favicon.ico?v=1632561359223">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://Allen3039.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Hello Gridea | Gridea - Atom Feed" href="https://Allen3039.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="const let 解惑 | Gridea - Atom Feed" href="https://Allen3039.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="aaa
-" />
-    <meta name="keywords" content="Gridea" />
+    <meta name="description" content="let 块级作用域的理解
+for(let i=0;i&lt;10;i++){
+    setTimeout(()=&gt;{
+        console.log(i)
+    },0)
+}
+// 按照标准来说
+for(let i=0;i..." />
+    <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -75,27 +81,44 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              Hello Gridea
+              const let 解惑
             </h2>
             <div class="post-info">
               <span>
-                2018-12-12
+                2021-07-21
               </span>
               <span>
                 1 min read
               </span>
               
-                <a href="https://Allen3039.github.io/tag/huwi33adp/" class="post-tag">
-                  # Gridea
-                </a>
-              
             </div>
-            
-              <img class="post-feature-image" src="https://Allen3039.github.io/post-images/hello-gridea.png" alt="">
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>aaa</p>
+                <p>let 块级作用域的理解</p>
+<pre><code>for(let i=0;i&lt;10;i++){
+    setTimeout(()=&gt;{
+        console.log(i)
+    },0)
+}
+// 按照标准来说
+for(let i=0;i&lt;10;i++){
+    let i = 隐藏作用域中的i
+    setTimeout(()=&gt;{
+        console.log(i)
+    },0)
+}
+</code></pre>
+<p>关于let 的变量提升<br>
+其实所谓的“变量提升”不是专有名词<br>
+正常一个变量被正常加载到程序中包含 创建 初始化 赋值 三个阶段<br>
+var 变量提前的是 创建和 初始化<br>
+let 变量提前的是 创建<br>
+const 变量 提前的也是创建<br>
+程序开始运行<br>
+var 变量 赋值<br>
+let 变量 初始化 、赋值<br>
+const 变量 初始化</p>
 
               </div>
               <div class="toc-container">
@@ -105,6 +128,15 @@
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://Allen3039.github.io/post/ascii-he-base64-zhuan-ma/">
+              <h3 class="post-title">
+                ASCII 和 base64转码
+              </h3>
+            </a>
+          </div>
         
 
         

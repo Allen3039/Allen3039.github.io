@@ -2,18 +2,20 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Hello Gridea | Gridea</title>
+<title>dom绘制策略 | Gridea</title>
 <link rel="shortcut icon" href="https://Allen3039.github.io/favicon.ico?v=1632561359223">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://Allen3039.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Hello Gridea | Gridea - Atom Feed" href="https://Allen3039.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="dom绘制策略 | Gridea - Atom Feed" href="https://Allen3039.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="aaa
-" />
-    <meta name="keywords" content="Gridea" />
+    <meta name="description" content="dom 绘制成图片
+dom2img
+copy html=&gt; svg foreignobject =&gt; datauri =&gt; canvas绘制 =&gt;toDataURL/ getImageData
+html2canvas..." />
+    <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -75,36 +77,57 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              Hello Gridea
+              dom绘制策略
             </h2>
             <div class="post-info">
               <span>
-                2018-12-12
+                2021-07-09
               </span>
               <span>
                 1 min read
               </span>
               
-                <a href="https://Allen3039.github.io/tag/huwi33adp/" class="post-tag">
-                  # Gridea
-                </a>
-              
             </div>
-            
-              <img class="post-feature-image" src="https://Allen3039.github.io/post-images/hello-gridea.png" alt="">
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>aaa</p>
+                <h1 id="dom-绘制成图片">dom 绘制成图片</h1>
+<p>dom2img<br>
+copy html=&gt; svg foreignobject =&gt; datauri =&gt; canvas绘制 =&gt;toDataURL/ getImageData</p>
+<p>html2canvas<br>
+类似的，也是绘制到svg中</p>
+<h1 id="console">console</h1>
+<p>node 下</p>
+<pre><code>const {Console}=require('console');
+const output=fs.createWritestream('./xx.js');
+c=new Console(output);
+global.console=c;
+</code></pre>
+<p>web下<br>
+console可以输出图片<br>
+也可以输出文字，如果希望文字的话可以使用Img2txt</p>
 
               </div>
               <div class="toc-container">
-                
+                <ul class="markdownIt-TOC">
+<li><a href="#dom-%E7%BB%98%E5%88%B6%E6%88%90%E5%9B%BE%E7%89%87">dom 绘制成图片</a></li>
+<li><a href="#console">console</a></li>
+</ul>
+
               </div>
             </div>
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://Allen3039.github.io/post/geojson-xue-xi/">
+              <h3 class="post-title">
+                geojson 学习
+              </h3>
+            </a>
+          </div>
         
 
         

@@ -2,18 +2,22 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Hello Gridea | Gridea</title>
+<title>ASCII 和 base64转码 | Gridea</title>
 <link rel="shortcut icon" href="https://Allen3039.github.io/favicon.ico?v=1632561359223">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://Allen3039.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Hello Gridea | Gridea - Atom Feed" href="https://Allen3039.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="ASCII 和 base64转码 | Gridea - Atom Feed" href="https://Allen3039.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="aaa
-" />
-    <meta name="keywords" content="Gridea" />
+    <meta name="description" content="01000001 01000000 00000000
+010000 010100 000000 000000
+ASCII: A@
+base64: QUA=
+注意虽然最后两个都是0， 但是最后一个是纯填充产生的0，这种时候的值为 '= '
+b..." />
+    <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -75,27 +79,36 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              Hello Gridea
+              ASCII 和 base64转码
             </h2>
             <div class="post-info">
               <span>
-                2018-12-12
+                2021-07-19
               </span>
               <span>
                 1 min read
               </span>
               
-                <a href="https://Allen3039.github.io/tag/huwi33adp/" class="post-tag">
-                  # Gridea
-                </a>
-              
             </div>
-            
-              <img class="post-feature-image" src="https://Allen3039.github.io/post-images/hello-gridea.png" alt="">
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>aaa</p>
+                <p>01000001 01000000 00000000<br>
+010000 010100 000000 000000<br>
+ASCII: A@<br>
+base64: QUA=<br>
+注意虽然最后两个都是0， 但是最后一个是纯填充产生的0，这种时候的值为 '= '<br>
+base64 指的是用可打印的字符（31-126）之间的95个字符来表示任意字符的方式。</p>
+<p>VLQ<br>
+将大数字转为二进制的一种规则</p>
+<p>base64-vlq<br>
+将数字转为二进制，<br>
+每六位转一个base64，<br>
+第一位为连续位，最后一位为标志位。<br>
+<img src="https://Allen3039.github.io/post-images/1626630246264.png" alt="" loading="lazy"><br>
+再转换为base64</p>
+<p>附上base64码表<br>
+<img src="https://Allen3039.github.io/post-images/1626630327954.png" alt="" loading="lazy"></p>
 
               </div>
               <div class="toc-container">
@@ -105,6 +118,15 @@
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://Allen3039.github.io/post/quic/">
+              <h3 class="post-title">
+                QUIC
+              </h3>
+            </a>
+          </div>
         
 
         

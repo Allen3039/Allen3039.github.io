@@ -2,18 +2,24 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Hello Gridea | Gridea</title>
+<title>QUIC | Gridea</title>
 <link rel="shortcut icon" href="https://Allen3039.github.io/favicon.ico?v=1632561359223">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://Allen3039.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Hello Gridea | Gridea - Atom Feed" href="https://Allen3039.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="QUIC | Gridea - Atom Feed" href="https://Allen3039.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="aaa
-" />
-    <meta name="keywords" content="Gridea" />
+    <meta name="description" content="网络模型
+物理层：0101
+数据链路层： 定义数据在局域网的传输
+网络层:：IP协议 可以跨进行更大的互联网传播
+传输层：
+UDP  额外指明数据需要发送到哪个端口
+TCP   除了UDP这些之外，做了额外的拥塞控制，快速重传
+应用层: h..." />
+    <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -75,36 +81,60 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              Hello Gridea
+              QUIC
             </h2>
             <div class="post-info">
               <span>
-                2018-12-12
+                2021-07-14
               </span>
               <span>
                 1 min read
               </span>
               
-                <a href="https://Allen3039.github.io/tag/huwi33adp/" class="post-tag">
-                  # Gridea
-                </a>
-              
             </div>
-            
-              <img class="post-feature-image" src="https://Allen3039.github.io/post-images/hello-gridea.png" alt="">
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>aaa</p>
+                <h2 id="网络模型">网络模型</h2>
+<p>物理层：0101<br>
+数据链路层： 定义数据在局域网的传输<br>
+网络层:：IP协议 可以跨进行更大的互联网传播<br>
+传输层：<br>
+UDP  额外指明数据需要发送到哪个端口<br>
+TCP   除了UDP这些之外，做了额外的拥塞控制，快速重传<br>
+应用层: http https</p>
+<h2 id="why-quic">why quic</h2>
+<ol>
+<li>https3 基于=》quic 协议=》 基于udp 协议 做了额外的tls ，拥塞控制之类</li>
+<li>tcp 是作为复杂的安全控制协议，太复杂，传输效率太低，升级困难已经作为共识存在操作系统中了。</li>
+<li>stream 复用一个连接</li>
+</ol>
 
               </div>
               <div class="toc-container">
-                
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B">网络模型</a></li>
+<li><a href="#why-quic">why quic</a></li>
+</ul>
+</li>
+</ul>
+
               </div>
             </div>
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://Allen3039.github.io/post/react-yi-xie-xue-xi/">
+              <h3 class="post-title">
+                react 一些学习
+              </h3>
+            </a>
+          </div>
         
 
         

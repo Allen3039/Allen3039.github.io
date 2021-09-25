@@ -2,18 +2,22 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Hello Gridea | Gridea</title>
+<title>Node 系列 | Gridea</title>
 <link rel="shortcut icon" href="https://Allen3039.github.io/favicon.ico?v=1632561359223">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://Allen3039.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Hello Gridea | Gridea - Atom Feed" href="https://Allen3039.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="Node 系列 | Gridea - Atom Feed" href="https://Allen3039.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="aaa
-" />
-    <meta name="keywords" content="Gridea" />
+    <meta name="description" content="V8 垃圾回收
+内存分配针对不同的存活时间，回收算法的取舍有所不同。
+新生代：
+scavenge 算法，将内存划分为 from 和 to 两块区域。将可用对象从 from 区域拷贝到 to 区域。
+新生代晋升到老生代的两种方式:
+1 对象已..." />
+    <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -75,36 +79,62 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              Hello Gridea
+              Node 系列
             </h2>
             <div class="post-info">
               <span>
-                2018-12-12
+                2021-08-08
               </span>
               <span>
                 1 min read
               </span>
               
-                <a href="https://Allen3039.github.io/tag/huwi33adp/" class="post-tag">
-                  # Gridea
-                </a>
-              
             </div>
-            
-              <img class="post-feature-image" src="https://Allen3039.github.io/post-images/hello-gridea.png" alt="">
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>aaa</p>
+                <p>V8 垃圾回收<br>
+内存分配针对不同的存活时间，回收算法的取舍有所不同。</p>
+<h1 id="新生代">新生代：</h1>
+<p>scavenge 算法，将内存划分为 from 和 to 两块区域。将可用对象从 from 区域拷贝到 to 区域。<br>
+新生代晋升到老生代的两种方式:<br>
+1 对象已经被scavenge 算法回收过<br>
+2 to 区域已经超过25%</p>
+<h1 id="老生代">老生代</h1>
+<h2 id="标记清除算法">标记清除算法</h2>
+<p>标记对象，进行回收，会留下磁盘碎片。</p>
+<h2 id="标记压缩算法">标记压缩算法</h2>
+<p>标记对象，回收时，会把需要保存的对象往一边移动，没有碎片。</p>
+<h2 id="增量标记算法">增量标记算法</h2>
+<p>将内存清除拆分步骤，留一定的时间来响应应用逻辑。</p>
 
               </div>
               <div class="toc-container">
-                
+                <ul class="markdownIt-TOC">
+<li><a href="#%E6%96%B0%E7%94%9F%E4%BB%A3">新生代：</a></li>
+<li><a href="#%E8%80%81%E7%94%9F%E4%BB%A3">老生代</a>
+<ul>
+<li><a href="#%E6%A0%87%E8%AE%B0%E6%B8%85%E9%99%A4%E7%AE%97%E6%B3%95">标记清除算法</a></li>
+<li><a href="#%E6%A0%87%E8%AE%B0%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95">标记压缩算法</a></li>
+<li><a href="#%E5%A2%9E%E9%87%8F%E6%A0%87%E8%AE%B0%E7%AE%97%E6%B3%95">增量标记算法</a></li>
+</ul>
+</li>
+</ul>
+
               </div>
             </div>
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://Allen3039.github.io/post/const-let-jie-huo/">
+              <h3 class="post-title">
+                const let 解惑
+              </h3>
+            </a>
+          </div>
         
 
         

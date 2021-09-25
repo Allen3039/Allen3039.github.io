@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Allen3039.github.io</id>
     <title>Gridea</title>
-    <updated>2021-07-03T05:45:31.816Z</updated>
+    <updated>2021-09-25T09:16:10.777Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Allen3039.github.io"/>
     <link rel="self" href="https://Allen3039.github.io/atom.xml"/>
@@ -10,6 +10,237 @@
     <logo>https://Allen3039.github.io/images/avatar.png</logo>
     <icon>https://Allen3039.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[一些好玩的工具]]></title>
+        <id>https://Allen3039.github.io/post/yi-xie-hao-wan-de-gong-ju/</id>
+        <link href="https://Allen3039.github.io/post/yi-xie-hao-wan-de-gong-ju/">
+        </link>
+        <updated>2021-09-25T09:12:00.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="代码图形化">代码图形化</h2>
+<p>https://pythontutor.com/live.html#mode=edit</p>
+<h2 id="摸鱼系列">摸鱼系列</h2>
+<p>利用svg 将游戏界面绘制在icon上，使用上下滑动控制球拍<br>
+https://favicon-pong.glitch.me/</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[package.json 知多少]]></title>
+        <id>https://Allen3039.github.io/post/packagejson-zhi-duo-shao/</id>
+        <link href="https://Allen3039.github.io/post/packagejson-zhi-duo-shao/">
+        </link>
+        <updated>2021-09-03T01:13:54.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="dependency">dependency</h2>
+<p>peer<br>
+开发对应工具的插件时使用，比如我给A开发了插件B，这个插件B依赖的A的版本是2.X，那么指定peer,就可以让B安装在指定依赖A是低版本的项目中报警。</p>
+<p>optional<br>
+npm install 这部分依赖报错不影响安装</p>
+<p>bundled<br>
+npm pack 会使用的字段</p>
+<h2 id="config">config</h2>
+<p>配和scripts 脚本使用</p>
+<pre><code>&quot;scripts&quot;:{
+&quot;testenv&quot;: &quot;node ./npmconfig.env.js&quot;
+} ,
+&quot;config&quot;: {
+    &quot;foo&quot;: 1
+  }
+</code></pre>
+<p>比如 这里面的脚本可以打印出，config内定义的变量，例如npm_package_config_foo</p>
+<h2 id="模块">模块</h2>
+<p>module<br>
+配和打包工具，环境是node 时 优先使用</p>
+<p>main<br>
+不使用打包工具时，node 优先使用</p>
+<p>browser<br>
+配和打包工具时，环境是browser 时 优先使用</p>
+<p>https://www.cnblogs.com/qianxiaox/p/14041717.html</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[取得不小于pool.used 且为8的倍数的值]]></title>
+        <id>https://Allen3039.github.io/post/qu-de-bu-xiao-yu-poolused-qie-wei-8-de-bei-shu-de-zhi/</id>
+        <link href="https://Allen3039.github.io/post/qu-de-bu-xiao-yu-poolused-qie-wei-8-de-bei-shu-de-zhi/">
+        </link>
+        <updated>2021-08-10T17:37:38.000Z</updated>
+        <content type="html"><![CDATA[<p>取得不小于pool.used 且为8的倍数的值<br>
+if (pool.used &amp; 7) pool.used = (pool.used + 8) &amp; ~7;</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Node 系列]]></title>
+        <id>https://Allen3039.github.io/post/node-xi-lie/</id>
+        <link href="https://Allen3039.github.io/post/node-xi-lie/">
+        </link>
+        <updated>2021-08-08T08:53:53.000Z</updated>
+        <content type="html"><![CDATA[<p>V8 垃圾回收<br>
+内存分配针对不同的存活时间，回收算法的取舍有所不同。</p>
+<h1 id="新生代">新生代：</h1>
+<p>scavenge 算法，将内存划分为 from 和 to 两块区域。将可用对象从 from 区域拷贝到 to 区域。<br>
+新生代晋升到老生代的两种方式:<br>
+1 对象已经被scavenge 算法回收过<br>
+2 to 区域已经超过25%</p>
+<h1 id="老生代">老生代</h1>
+<h2 id="标记清除算法">标记清除算法</h2>
+<p>标记对象，进行回收，会留下磁盘碎片。</p>
+<h2 id="标记压缩算法">标记压缩算法</h2>
+<p>标记对象，回收时，会把需要保存的对象往一边移动，没有碎片。</p>
+<h2 id="增量标记算法">增量标记算法</h2>
+<p>将内存清除拆分步骤，留一定的时间来响应应用逻辑。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[const let 解惑]]></title>
+        <id>https://Allen3039.github.io/post/const-let-jie-huo/</id>
+        <link href="https://Allen3039.github.io/post/const-let-jie-huo/">
+        </link>
+        <updated>2021-07-20T17:48:49.000Z</updated>
+        <content type="html"><![CDATA[<p>let 块级作用域的理解</p>
+<pre><code>for(let i=0;i&lt;10;i++){
+    setTimeout(()=&gt;{
+        console.log(i)
+    },0)
+}
+// 按照标准来说
+for(let i=0;i&lt;10;i++){
+    let i = 隐藏作用域中的i
+    setTimeout(()=&gt;{
+        console.log(i)
+    },0)
+}
+</code></pre>
+<p>关于let 的变量提升<br>
+其实所谓的“变量提升”不是专有名词<br>
+正常一个变量被正常加载到程序中包含 创建 初始化 赋值 三个阶段<br>
+var 变量提前的是 创建和 初始化<br>
+let 变量提前的是 创建<br>
+const 变量 提前的也是创建<br>
+程序开始运行<br>
+var 变量 赋值<br>
+let 变量 初始化 、赋值<br>
+const 变量 初始化</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ASCII 和 base64转码]]></title>
+        <id>https://Allen3039.github.io/post/ascii-he-base64-zhuan-ma/</id>
+        <link href="https://Allen3039.github.io/post/ascii-he-base64-zhuan-ma/">
+        </link>
+        <updated>2021-07-18T16:56:29.000Z</updated>
+        <content type="html"><![CDATA[<p>01000001 01000000 00000000<br>
+010000 010100 000000 000000<br>
+ASCII: A@<br>
+base64: QUA=<br>
+注意虽然最后两个都是0， 但是最后一个是纯填充产生的0，这种时候的值为 '= '<br>
+base64 指的是用可打印的字符（31-126）之间的95个字符来表示任意字符的方式。</p>
+<p>VLQ<br>
+将大数字转为二进制的一种规则</p>
+<p>base64-vlq<br>
+将数字转为二进制，<br>
+每六位转一个base64，<br>
+第一位为连续位，最后一位为标志位。<br>
+<img src="https://Allen3039.github.io/post-images/1626630246264.png" alt="" loading="lazy"><br>
+再转换为base64</p>
+<p>附上base64码表<br>
+<img src="https://Allen3039.github.io/post-images/1626630327954.png" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[QUIC]]></title>
+        <id>https://Allen3039.github.io/post/quic/</id>
+        <link href="https://Allen3039.github.io/post/quic/">
+        </link>
+        <updated>2021-07-13T16:38:36.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="网络模型">网络模型</h2>
+<p>物理层：0101<br>
+数据链路层： 定义数据在局域网的传输<br>
+网络层:：IP协议 可以跨进行更大的互联网传播<br>
+传输层：<br>
+UDP  额外指明数据需要发送到哪个端口<br>
+TCP   除了UDP这些之外，做了额外的拥塞控制，快速重传<br>
+应用层: http https</p>
+<h2 id="why-quic">why quic</h2>
+<ol>
+<li>https3 基于=》quic 协议=》 基于udp 协议 做了额外的tls ，拥塞控制之类</li>
+<li>tcp 是作为复杂的安全控制协议，太复杂，传输效率太低，升级困难已经作为共识存在操作系统中了。</li>
+<li>stream 复用一个连接</li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[react 一些学习]]></title>
+        <id>https://Allen3039.github.io/post/react-yi-xie-xue-xi/</id>
+        <link href="https://Allen3039.github.io/post/react-yi-xie-xue-xi/">
+        </link>
+        <updated>2021-07-11T12:42:30.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="fiber">fiber</h2>
+<p>requestidlecallback 兼容性<br>
+msssgaechangel 模拟requestidelcallback</p>
+<h2 id="关于react">关于React</h2>
+<p>页面=&gt;由component组成=&gt; 渲染element</p>
+<h2 id="高阶组件">高阶组件：</h2>
+<p>1 属性代理<br>
+劫持属性<br>
+劫持ref （看看ref上都有哪些东西），<br>
+TODO: <strong>话说这里可以劫持方法吗（可以一试） this.ref.funcA=hijackedFuncA;</strong><br>
+可以劫持函数</p>
+<pre><code>export default () =&gt; {
+    return (C) =&gt; {
+        return class extends React.Component {
+            constructor() {
+                super();
+                this.innerRef = React.createRef();
+            }
+            componentDidMount() {
+                console.log(&quot;this.innerRef&quot;, this.innerRef);
+                this.innerRef.current.__proto__.click = WrapHandler(this.innerRef.current.__proto__.click);
+            }
+            render() {
+                return &lt;C ref={this.innerRef} &gt;&lt;/C&gt;
+            }
+        }
+    }
+}
+</code></pre>
+<p>2 继承/劫持<br>
+劫持点击方法<br>
+TODO: super.render=&gt;element=&gt; react.cloneElement自定义一些方法<br>
+劫持render<br>
+额，返回新render就完事了</p>
+<h2 id="class-缺点">class 缺点</h2>
+<p>逻辑无法复用，或者复用手段只能是高阶组件这种，但是高阶组件会额外产生一个层级，影响渲染效率</p>
+<p>逻辑分离，定时器，事件监听和释放等操作不易维护</p>
+<p>this 指向问题</p>
+<h2 id="hooks-有点">hooks 有点</h2>
+<ol>
+<li>利于逻辑拆分，进而逻辑复用</li>
+<li>定时器等可以容易维护</li>
+</ol>
+<p>TODO: useState ,useHooks，useRef 手写</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[dom绘制策略]]></title>
+        <id>https://Allen3039.github.io/post/dom-hui-zhi-ce-lue/</id>
+        <link href="https://Allen3039.github.io/post/dom-hui-zhi-ce-lue/">
+        </link>
+        <updated>2021-07-08T17:13:21.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="dom-绘制成图片">dom 绘制成图片</h1>
+<p>dom2img<br>
+copy html=&gt; svg foreignobject =&gt; datauri =&gt; canvas绘制 =&gt;toDataURL/ getImageData</p>
+<p>html2canvas<br>
+类似的，也是绘制到svg中</p>
+<h1 id="console">console</h1>
+<p>node 下</p>
+<pre><code>const {Console}=require('console');
+const output=fs.createWritestream('./xx.js');
+c=new Console(output);
+global.console=c;
+</code></pre>
+<p>web下<br>
+console可以输出图片<br>
+也可以输出文字，如果希望文字的话可以使用Img2txt</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[geojson 学习]]></title>
         <id>https://Allen3039.github.io/post/geojson-xue-xi/</id>
@@ -202,15 +433,6 @@
 </code></pre>
 <p>示例<br>
 <img src="https://Allen3039.github.io/post-images/1625288064945.png" alt="" loading="lazy"></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://Allen3039.github.io/post/hello-gridea/</id>
-        <link href="https://Allen3039.github.io/post/hello-gridea/">
-        </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <content type="html"><![CDATA[<p>aaa</p>
 ]]></content>
     </entry>
 </feed>
